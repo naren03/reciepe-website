@@ -27,11 +27,11 @@ searchBtn.addEventListener("click", (e) => {
 
 				const div = document.createElement("div");
 				div.innerHTML = `
-					<div>
+					
 					<img src=https://spoonacular.com/recipeImages/${recipe.image} 
 					alt="food-item"><h3>${recipe.title}</h3>
 					<button id="openModal">Open Modal</button>
-					</div>`;
+					`;
 
 				reciepeGallery.appendChild(div);
 			});
