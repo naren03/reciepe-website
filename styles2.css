@@ -69,11 +69,48 @@ header h2{
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 20px;
   margin-top: 20px;
-
-  
 }
 
 .gallery img {
   width: 100%;
   height: auto;
 }
+
+
+/* recipe details style START  */
+#modalContainer {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalContent {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+#closeModal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#closeModal:hover {
+  color: red;
+}
+
+/* recipe details style END  */
