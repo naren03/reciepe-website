@@ -7,8 +7,12 @@ const searchBtn = document.querySelector(".searchBtn");
 const searchBar = document.querySelector(".searchInput");
 // recipe gallery
 const reciepeGallery = document.querySelector(".gallery");
-
+// search value
 let searchQuery;
+
+const openModalBtn = document.getElementById("openModal");
+const modalContainer = document.getElementById("modalContainer");
+const closeModalBtn = document.getElementById("closeModal");
 
 // search Btn functionality when user clicks on it
 searchBtn.addEventListener("click", (e) => {
@@ -27,16 +31,23 @@ searchBtn.addEventListener("click", (e) => {
 
 				const div = document.createElement("div");
 				div.innerHTML = `
-					
 					<img src=https://spoonacular.com/recipeImages/${recipe.image} 
 					alt="food-item"><h3>${recipe.title}</h3>
-					<button id="openModal">Open Modal</button>
+          <button>More Info</button>
 					`;
 
 				reciepeGallery.appendChild(div);
 			});
 		})
 		.catch((error) => console.log(error)); // handle any errors that occur
+});
+
+reciepeGallery.addEventListener("click", (e) => {
+	if (e.target.tagName == "BUTTON") {
+		console.log("hii");
+
+		if (modalContainer.style.visibility == "hidden") console.log("ggujgu");
+	}
 });
 
 // // for random search results
@@ -71,3 +82,9 @@ searchBtn.addEventListener("click", (e) => {
 // 	.catch((error) => console.log(error)); // handle any errors that occur
 
 // // https://spoonacular.com/cdn/ingredients_250x250/chicken-breasts.png
+
+// openModalBtn.addEventListener("click", function () {});
+
+// closeModalBtn.addEventListener("click", function () {
+// 	modalContainer.style.display = "none";
+// });
