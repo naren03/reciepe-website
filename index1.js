@@ -44,7 +44,7 @@ searchBtn.addEventListener("click", (e) => {
 
 reciepeGallery.addEventListener("click", (e) => {
 	if (e.target.tagName == "BUTTON") {
-		console.log("hii");
+		console.log("working!!!");
 
 		if (modalContainer.style.visibility == "hidden") console.log("ggujgu");
 	}
