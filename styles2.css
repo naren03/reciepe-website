@@ -74,6 +74,17 @@ header h2 {
   transform: translateY(4px);
 }
 
+.moreinfo{
+  background-color: #2e27279b;
+  outline: none;
+  border: none;
+  display: block;
+  width: 90%;
+  height: 2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
 
 .gallery {
   display: grid;
@@ -158,6 +169,8 @@ header h2 {
 #closeModal:hover {
   color: red;
 }
+
+
 
 /* modal image  */
 
