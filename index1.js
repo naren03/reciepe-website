@@ -7,6 +7,8 @@ const searchBtn = document.querySelector(".searchBtn");
 const searchBar = document.querySelector(".searchInput");
 // recipe gallery
 const reciepeGallery = document.querySelector(".gallery");
+// error msg
+const errorMsg = document.getElementById("error");
 // search value
 let searchQuery;
 
@@ -26,6 +28,12 @@ searchBtn.addEventListener("click", (e) => {
 		.then((response) => response.json())
 		.then((data) => {
 			const recipes = data.results;
+
+			if (recipes.length == 0) {
+				alert("Recipe Not Found !!!");
+				console.log("error");
+			}
+
 			recipes.forEach((recipe) => {
 				console.log(recipe);
 
@@ -45,8 +53,6 @@ searchBtn.addEventListener("click", (e) => {
 reciepeGallery.addEventListener("click", (e) => {
 	if (e.target.tagName == "BUTTON") {
 		console.log("hii");
-
-		if (modalContainer.style.visibility == "hidden") console.log("ggujgu");
 	}
 });
 

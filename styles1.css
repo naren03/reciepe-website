@@ -11,3 +11,9 @@
   --secondary:"#eee";
   --bg: "#eee";
 }
+
+
+#error{
+  color:red;
+  opacity: 0;
+}
